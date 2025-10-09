@@ -202,8 +202,8 @@
 #string STR_DUMPING                         #language en-US  "Создаем дамп секции на накопителе,\nэто должно занять не более 3 сек.\nИначе, UEFI не поддерживается.\n\r"
                                             #language en-GB  "Creating section dump on FS,\nthis shouldn't take more than 3 secs.\nOtherwise, UEFI system unsupported.\n\r"
 
-#string STR_DEFAULT_FILTER                  #language en-US  "Going to search with EfiFirmwareVolume2Protocol\n\r"
-                                            #language en-GB  "Поиск будет выполнен через EfiFirmwareVolume2Protocol\n\r"
+#string STR_DEFAULT_FILTER                  #language en-US  "Поиск будет выполнен через EfiFirmwareVolume2Protocol\n\r"
+                                            #language en-GB  "Going to search with EfiFirmwareVolume2Protocol\n\r"
 
 #string STR_RETRIEVE_FREEFORM               #language en-US  "Пытаемся найти секцию FREEFORM в файле\n\r"
                                             #language en-GB  "Trying to retrieve FREEFORM section from file\n\r"

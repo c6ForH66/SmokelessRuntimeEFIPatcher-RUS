@@ -5,7 +5,7 @@
 #include "Opcode.h"
 
 //Specify app version
-#define SREP_VERSION L"0.2.0 Xazanavi edition RUS"
+#define SREP_VERSION L"0.2.0d Xazanavi edition RUS"
 
 
 EFI_BOOT_SERVICES *_gBS = NULL;
@@ -217,6 +217,7 @@ CheckArgs(IN EFI_HANDLE ImageHandle) {
 EFI_STATUS EFIAPI
 SREPEntry(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable) {
     EFI_STATUS Status;
+    EFI_STATUS SkipReason = EFI_NOT_FOUND;
     EFI_HANDLE AppImageHandle;
     EFI_HANDLE_PROTOCOL HandleProtocol;
     EFI_REGULAR_EXPRESSION_PROTOCOL *RegularExpressionProtocol = NULL;
@@ -1307,8 +1308,9 @@ SREPEntry(IN EFI_HANDLE ImageHandle, IN EFI_SYSTEM_TABLE *SystemTable) {
             }
             else
             {
-              Print(L"%s%r\n\r", HiiGetString(HiiHandle, STRING_TOKEN(STR_LAST_STATUS), NULL), Status);
-              UnicodeSPrint(Log, 0x200, u"%s%r\n\r", HiiGetString(HiiHandle, STRING_TOKEN(STR_LAST_STATUS), NULL), Status);
+              SkipReason = (Status == EFI_SUCCESS) ? EFI_NOT_FOUND : Status;
+              Print(L"%s%r\n\r", HiiGetString(HiiHandle, STRING_TOKEN(STR_LAST_STATUS), NULL), SkipReason);
+              UnicodeSPrint(Log, 0x200, u"%s%r\n\r", HiiGetString(HiiHandle, STRING_TOKEN(STR_LAST_STATUS), NULL), SkipReason);
               LogToFile(LogFile, Log);
             }
             isOpSkipAllowed = FALSE;
