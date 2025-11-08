@@ -40,4 +40,5 @@
   SortLib|MdeModulePkg/Library/UefiSortLib/UefiSortLib.inf
 
 [Components]
-  SREPPkg/SmokelessRuntimeEFIPatcher/SmokelessRuntimeEFIPatcher.inf
+  SmokelessRuntimeEFIPatcher/SmokelessRuntimeEFIPatcher/SmokelessRuntimeEFIPatcher.inf
+
