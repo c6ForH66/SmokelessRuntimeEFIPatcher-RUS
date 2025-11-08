@@ -14,7 +14,6 @@
   RussianFont.c
   Strings.uni
   Images.idf
-  Logo.bmp
 
 [Packages]
   SmokelessRuntimeEFIPatcher/SmokelessRuntimeEFIPatcher.dec
@@ -63,6 +62,7 @@
   gEfiDxeServicesTableGuid                      ## CONSUMES
   gEfiGlobalVariableGuid                        ## CONSUMES
   gHIIRussianFontGuid                           ## PRODUCES
+
 
 
 
