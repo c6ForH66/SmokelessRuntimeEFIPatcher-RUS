@@ -49,7 +49,6 @@
   gEfiSerialIoProtocolGuid                      ## CONSUMES
   gEfiDevicePathToTextProtocolGuid              ## CONSUMES
   gEfiShellParametersProtocolGuid               ## CONSUMES
-  gEfiFirmwareVolumeProtocolGuid                ## CONSUMES
   gEfiFirmwareVolume2ProtocolGuid               ## CONSUMES
   gEdkiiFormBrowserEx2ProtocolGuid              ## CONSUMES
   gEdkiiFormBrowserExProtocolGuid               ## CONSUMES
@@ -64,5 +63,6 @@
   gEfiDxeServicesTableGuid                      ## CONSUMES
   gEfiGlobalVariableGuid                        ## CONSUMES
   gHIIRussianFontGuid                           ## PRODUCES
+
 
 
